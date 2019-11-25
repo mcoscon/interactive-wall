@@ -1,4 +1,4 @@
-# About emptyExample
+# Interactive wall project
 
 ![Screenshot of emptyExample](emptyExample.png)
 
