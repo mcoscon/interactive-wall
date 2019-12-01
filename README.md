@@ -20,7 +20,13 @@
 ### HDMI AUDI0
 * CD into boot and edit the config.txt file
 * Uncomment "hdmi_drive=2"
-* Additionally change gpu_mem to 
+
+
+### Final steps
+* Clone the repository shared to you into the /openFrameworks/apps/myApps folder.
+* CD into interactiveWall and perform a 'make clean'
+* Run 'make'.
+* CD into bin and run the executable.
 
 
 ### Expected Behavior
