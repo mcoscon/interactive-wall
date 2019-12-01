@@ -2,15 +2,25 @@
 
 ![Screenshot of emptyExample](emptyExample.png)
 
-### Learning Objectives
+### Setting Up
+* Flashing raspbian OS on an micro SD card to be used by the Raspberry Pi.
+* Set all necessary configurations for raspberry pi on first time boot. (i.e country, time, language, wiFi)
+* Password set is 'ombakdevhouse'
+* Update software when prompted
+* Configure and compiling openframeworks on raspberry pi https://openframeworks.cc/setup/raspberrypi/raspberry-pi-getting-started/
+* There will be an issue compiling OF. The solution is here https://forum.openframeworks.cc/t/rpi-4-raspbian-buster-openframeworks/32856/23
+  Simply, 'ctrl f', search 'I compiled and ran the polygon example' and follow the changes written.
+* Running the polygon example should be no issue
 
-This example is the simplest possible openFrameworks app! It does nothing. 
+### ofOMXPlayer
+* Follow build instructions here https://github.com/jvcleave/ofxOMXPlayer
+* Git clone the repo inside the addon folder in the openFrameworks directory
+* CD into the ofOMXPlayer and type in 'sudo ./install_depends.sh'
 
-...Well, *almost* nothing. Although it may not be apparent, the emptyExample activates all of the default system states. (For example, it sets the default fill color to white; it just doesn't happen to draw anything with it.)
-
-The emptyExample is great for making sure that your openFrameworks development environment is compiling properly. It can also be useful as a "starter template" for making simple programs. 
-
-The emptyExample will help you understand what are the bare necessities of an openFrameworks program. In this regard, you can think of it as a "Hello World" for OF. 
+### HDMI AUDI0
+* CD into boot and edit the config.txt file
+* Uncomment "hdmi_drive=2"
+* Additionally change gpu_mem to 
 
 
 ### Expected Behavior
