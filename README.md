@@ -24,23 +24,14 @@
 
 ### Final steps
 * Clone the repository shared to you into the /openFrameworks/apps/myApps folder.
-* CD into interactiveWall and perform a 'make clean'
+* CD into interactiveWall and rename it to wallApp (This is to fix path issues when loading the animations)
+* Run 'make clean' on the terminal in the wallApp directory
 * Run 'make'.
 * CD into bin and run the executable.
 
-
 ### Expected Behavior
+When launching this app, you should expect to see the animations playing with button presses or with the capacitive sensors.
 
-When launching this app, you should see a light-gray screen. 
 
-* There's no interaction. 
-* There's nothing to see. 
-* That's it. 
 
-Instructions for using the app:
 
-* There's nothing to do. Move along.
-
-### Other classes used in this file
-
-This example uses no other classes.
