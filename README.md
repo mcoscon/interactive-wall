@@ -22,7 +22,7 @@
 
 ### Final steps
 * Clone the repository shared to you into the /openFrameworks/apps/myApps folder.
-* CD into interactiveWall and rename it to wallApp (This is to fix path issues when loading the animations)
+* CD into interactiveWall.
 * Run 'make clean' on the terminal in the wallApp directory
 * Run 'make'.
 * CD into bin and run the executable.
