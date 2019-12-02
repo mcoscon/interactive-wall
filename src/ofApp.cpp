@@ -67,7 +67,7 @@ void ofApp::update(){
 	// void play();
     // void stop();
 	//  void SetOrientation(int degreesClockWise, bool doMirror=false);
-
+}
 //--------------------------------------------------------------
 void ofApp::draw(){
     omxPlayer[0].draw(170,ofGetWindowHeight()-476*1.4,746*1.4, 476*1.4); //solar
@@ -96,7 +96,7 @@ void ofApp::keyPressed(int key){
 	     case 'e':
 		     omxPlayer[4].setup(settings[4]);
 	    omxPlayer[5].setup(settings[5]);
-		    
+		    break;
         }
 
 }
