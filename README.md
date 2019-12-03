@@ -8,14 +8,14 @@
 * Configure and compiling openframeworks on raspberry pi https://openframeworks.cc/setup/raspberrypi/raspberry-pi-getting-started/
 * There will be an issue compiling OF. The solution is here https://forum.openframeworks.cc/t/rpi-4-raspbian-buster-openframeworks/32856/23
   Simply, 'ctrl f', search 'I compiled and ran the polygon example' and follow the changes written.
-* Running the polygon example should be no issue
+* Running the polygon example should be no issue.
 
 ### ofOMXPlayer
 * Follow build instructions here https://github.com/jvcleave/ofxOMXPlayer
 * Git clone the repo inside the addon folder in the openFrameworks directory
 * CD into the ofOMXPlayer and type in 'sudo ./install_depends.sh'
 
-### HDMI AUDI0
+### HDMI AUDIO
 * CD into boot and edit the config.txt file
 * Uncomment "hdmi_drive=2"
 
@@ -25,10 +25,11 @@
 * CD into interactiveWall.
 * Run 'make clean' on the terminal in the wallApp directory
 * Run 'make'.
-* CD into bin and run the executable.
+* CD into bin and run the executable. (./interactiveWall)
 
 ### Expected Behavior
 When launching this app, you should expect to see the animations playing with button presses or with the capacitive sensors.
+(Key presss - q, w, e), to exit press r.
 
 
 
