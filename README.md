@@ -6,6 +6,7 @@
 * Password set is 'ombakdevhouse'
 * Update software when prompted
 * Configure and compiling openframeworks on raspberry pi https://openframeworks.cc/setup/raspberrypi/raspberry-pi-getting-started/
+  **Important**: **Make sure to download Openframeworks version 0.10.0 and not the latest 0.11.0** To do this, everything that has 0.11.0 in     the commands should be changed to 0.10.0
 * There will be an issue compiling OF. The solution is here https://forum.openframeworks.cc/t/rpi-4-raspbian-buster-openframeworks/32856/23
   Simply, 'ctrl f', search 'I compiled and ran the polygon example' and follow the changes written.
 * Running the polygon example should be no issue.
@@ -23,6 +24,7 @@
 ### Final steps
 * Clone the repository shared to you into the /openFrameworks/apps/myApps folder.
 * CD into interactiveWall.
+* Open config.make and insert the required project flags as done in the **Setting up section for the polygon example**
 * Run 'make clean' on the terminal in the wallApp directory
 * Run 'make'.
 * CD into bin and run the executable. (./interactiveWall)
