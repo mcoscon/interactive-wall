@@ -78,7 +78,7 @@
 ################################################################################
 # PROJECT_LDFLAGS=-Wl,-rpath=./libs
 PROJECT_LDFLAGS += -lwiringPi
-
+PROJECT_LDFLAGS += -latomic
 ################################################################################
 # PROJECT DEFINES
 #   Create a space-delimited list of DEFINES. The list will be converted into 
