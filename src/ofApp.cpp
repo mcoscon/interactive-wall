@@ -37,10 +37,10 @@ void ofApp::setup(){
     for(i = 0; i<6; i++){
 		
     settings[i].videoPath = videoName[i];
-	settings[i].useHDMIForAudio = true;	//default true
+	settings[i].useHDMIForAudio = false;	//default true
 	settings[i].enableTexture = true;		//default true
 	settings[i].enableLooping = false;		//default true
-	settings[i].enableAudio = true;		//default true, save resources by disabling
+	settings[i].enableAudio = false;		//default true, save resources by disabling
 }
 	  
 }
@@ -53,6 +53,7 @@ void ofApp::update(){
 	    omxPlayer[1].setup(settings[1]);
 	   
 	}
+	/*
  if(digitalRead(3)){
 	omxPlayer[2].setup(settings[2]);
 	    omxPlayer[3].setup(settings[3]);
@@ -62,6 +63,7 @@ void ofApp::update(){
 	omxPlayer[4].setup(settings[4]);
 	    omxPlayer[5].setup(settings[5]);
 	}
+	*/
 	//  bool isPlaying();
 	//  bool videoHasEnded;
 	// void play();
