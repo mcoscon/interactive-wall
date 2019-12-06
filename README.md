@@ -24,7 +24,6 @@
 ### Final steps
 * Clone the repository shared to you into the /openFrameworks/apps/myApps folder.
 * CD into interactiveWall.
-* Open config.make and insert the required project flags as done in the **Setting up section for the polygon example**
 * Run 'make clean' on the terminal in the wallApp directory
 * Run 'make'.
 * CD into bin and run the executable. (./interactiveWall)
