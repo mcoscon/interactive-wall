@@ -32,6 +32,8 @@
 When launching this app, you should expect to see the animations playing with button presses or with the capacitive sensors.
 (Key presss - q, w, e), to exit press r.
 
-
+### Start program on startup
+cd into /boot and edit rc.local and add the following line after 'this script does nothing':
+/home/pi/openFrameworks/apps/myApps/interactiveWall/bin/interactiveWall &
 
 
