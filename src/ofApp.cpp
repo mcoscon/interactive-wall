@@ -1,6 +1,7 @@
 #include "ofApp.h"
 #include "wiringPi.h"
 #include "ofxOMXPlayer.h"
+#include "ofxNetwork.h"
 string videoName[6] = {ofToDataPath("/home/pi/openFrameworks/apps/myApps/interactiveWall/bin/data/_solarfarm.mp4"),
 	ofToDataPath("/home/pi/openFrameworks/apps/myApps/interactiveWall/bin/data/_building.mp4"),
 	ofToDataPath("/home/pi/openFrameworks/apps/myApps/interactiveWall/bin/data/_paint.mp4"),
@@ -16,7 +17,9 @@ bool sensor0 = false;
 bool sensor1 = false;
 bool sensor2 = false;
 int i = 0;
+int j = 0;
 ofxOMXPlayerSettings settings[6];
+string str;
 
 //--------------------------------------------------------------
 void ofApp::setup(){
@@ -42,19 +45,52 @@ void ofApp::setup(){
 	settings[i].enableLooping = false;		//default true
 	settings[i].enableAudio = false;		//default true, save resources by disabling
 }
-	  
+	tcpServer.setup(52232);
+	tcpServer.setMessageDelimiter("**");
+	//ofSetOrientation(OF_ORIENTATION_180);
 }
 
 //--------------------------------------------------------------
 void ofApp::update(){
-
+	
+	for(int i = 0; i<tcpServer.getLastID();i++)
+	{
+	if(tcpServer.isClientConnected(i))
+	{	
+		str = tcpServer.receive(i);
+		cout << str;
+		
+	}
+	}
+	if(str=="first"){
+				omxPlayer[0].setup(settings[0]);
+	    omxPlayer[1].setup(settings[1]);
+		}
+	if(str=="second"){
+				omxPlayer[2].setup(settings[2]);
+	    omxPlayer[3].setup(settings[3]);
+		}
+	if(str=="third"){
+				omxPlayer[4].setup(settings[4]);
+	    omxPlayer[5].setup(settings[5]);
+		}
+    /*
     if(digitalRead(0)){
 	omxPlayer[0].setup(settings[0]);
 	    omxPlayer[1].setup(settings[1]);
 	   
+    }
+    
+    for(j = 0; j<6; j++)
+    {
+	if(!omxPlayer[j].isPlaying())
+	{
+	    omxPlayer[j].close();
 	}
-	/*
- if(digitalRead(3)){
+    }
+    */
+	
+ /*if(digitalRead(3)){
 	omxPlayer[2].setup(settings[2]);
 	    omxPlayer[3].setup(settings[3]);
 	   
@@ -62,13 +98,21 @@ void ofApp::update(){
  if(digitalRead(21)){
 	omxPlayer[4].setup(settings[4]);
 	    omxPlayer[5].setup(settings[5]);
-	}
-	*/
+	}*/
+	
 	//  bool isPlaying();
 	//  bool videoHasEnded;
 	// void play();
     // void stop();
 	//  void SetOrientation(int degreesClockWise, bool doMirror=false);
+	/*
+	for(int j = 0; j<6; j++){
+		if(!omxPlayer[j].isPlaying())
+		{
+			omxPlayer[j].close();
+		}
+	}
+	*/
 }
 //--------------------------------------------------------------
 void ofApp::draw(){
