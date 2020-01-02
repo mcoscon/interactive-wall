@@ -1,5 +1,8 @@
 # Interactive wall project
 
+## Demo
+![demo](ezgif.com-video-to-gif (1).gif)
+
 ### Setting Up
 * Flashing raspbian OS on an micro SD card to be used by the Raspberry Pi.
 * Set all necessary configurations for raspberry pi on first time boot. (i.e country, time, language, wiFi)
