@@ -1,7 +1,7 @@
 # Interactive wall project
 
 ## Demo
-![demogif](demo.gif)
+![demogif](demoWall.gif)
 
 ### Setting Up
 * Flashing raspbian OS on an micro SD card to be used by the Raspberry Pi.
