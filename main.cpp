@@ -9,12 +9,10 @@ char const* PASSWORD = "patreck1";
 char const* HOST = "192.168.0.104"; //check ip of raspberry pi
 uint16_t PORT = 52232;
 
-int capSensor1 = 23;
-/*Comment for now */
-/*
-int capSensor2 = 24;
-int capSensor3 = 25;
-*/
+int capSensor1 = 14;
+int capSensor2 = 12;
+int capSensor3 = 13;
+
 void setup() {
  	Serial.begin(115200);
 	delay(20);
@@ -31,10 +29,8 @@ void setup() {
   Serial.println("IP address: ");
   Serial.println(WiFi.localIP());
   pinMode(capSensor1, INPUT);
-  /*
   pinMode(capSensor2, INPUT);
   pinMode(capSensor3, INPUT);
-  */
 }
 
 void loop() {
@@ -51,7 +47,6 @@ void loop() {
     {
       client.print("first**");
     }
-    /*
     else if(digitalRead(capSensor2))
     {
        client.print("second**");
@@ -60,11 +55,10 @@ void loop() {
     {
       client.print("third**");
     }
-    */
     else{
       client.print("nvm**");
     }
     client.stop();
     Serial.println("Waiting 5 seconds before restarting...");
-    delay(100);
+    delay(200);
 }
