@@ -1,18 +1,17 @@
 /* This code consists of a TCP client in the ESP32 connected to a TCP server hosted in the RPI openFrameworks */
 /* Will need to adjust accordingly for ESP8266 */
 #include <Arduino.h>
-#include "WiFi.h" 
+#include <ESP8266WiFi.h>
 
 /* This will need to change accordingly based on router configuration */
-char const* SSID = "9184@unifi";
-char const* PASSWORD = "patreck1";
-char const* HOST = "192.168.0.104"; //check ip of raspberry pi
-uint16_t PORT = 52232;
+char const* SSID = "Pinstay10-16";
+char const* PASSWORD = "ilovepinstay1016";
+char const* HOST = "192.168.1.80"; //check ip of raspberry pi
+uint16_t PORT = 52233;
 
 int capSensor1 = 14;
 int capSensor2 = 12;
 int capSensor3 = 13;
-
 void setup() {
  	Serial.begin(115200);
 	delay(20);
@@ -43,18 +42,24 @@ void loop() {
         delay(5000);
         return;
     }
+
     if(digitalRead(capSensor1))
     {
       client.print("first**");
+      Serial.println("first");
     }
     else if(digitalRead(capSensor2))
     {
-       client.print("second**");
+      client.print("second**");
+      Serial.println("second");
     }
-    else if((digitalRead(capSensor3))
+    
+    else if(digitalRead(capSensor3))
     {
       client.print("third**");
+      Serial.println("third");
     }
+    
     else{
       client.print("nvm**");
     }
