@@ -2,6 +2,7 @@
 
 ## Demo
 ![demogif](demoWall.gif)
+https://www.reddit.com/r/raspberry_pi/comments/emuhlx/our_first_pi_project_interactive_wall/
 
 ### Hardware Used
 * Raspberry Pi 3B+ with raspbian OS
@@ -51,5 +52,6 @@ When launching this app, you should expect to see the animations playing with bu
 ### Start program on startup
 cd into /boot and edit rc.local and add the following line after 'this script does nothing':
 /home/pi/openFrameworks/apps/myApps/interactiveWall/bin/interactiveWall &
+
 
 
