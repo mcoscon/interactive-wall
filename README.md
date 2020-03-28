@@ -1,8 +1,8 @@
 # Interactive Wall
 
 ## Demo
-![demogif](demoWall.gif)
 https://www.reddit.com/r/raspberry_pi/comments/emuhlx/our_first_pi_project_interactive_wall/
+![demogif](demoWall.gif)
 
 ### Hardware Used
 * Raspberry Pi 3B+ with raspbian OS
