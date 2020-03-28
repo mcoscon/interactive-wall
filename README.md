@@ -1,4 +1,4 @@
-# Interactive wall project
+# Interactive Wall
 
 ## Demo
 ![demogif](demoWall.gif)
