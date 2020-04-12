@@ -1,7 +1,6 @@
 # Interactive Wall
 
 ## Demo
-https://www.reddit.com/r/raspberry_pi/comments/emuhlx/our_first_pi_project_interactive_wall/
 ![demogif](demoWall.gif)
 
 ### Hardware Used
