@@ -10,9 +10,9 @@
 * Wires and breadboard
 * Wood frame and wall art sticker
 
-### Software Used
-* Openframeworks
-* PlatformIO 
+### Software and languages
+* Openframeworks, a C++ framework
+* make
 
 
 ### Setting Up
