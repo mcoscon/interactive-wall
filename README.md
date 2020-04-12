@@ -1,7 +1,7 @@
 # Interactive Wall
 
 ## Demo
-![demogif](demoWall.gif)
+![demogif](pinstay.gif)
 
 ### Hardware Used
 * Raspberry Pi 3B+ with raspbian OS
